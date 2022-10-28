@@ -46,7 +46,7 @@ public class AuthController {
     @Autowired
     JwtProvider jwtProvider;
 
-    @PostMapping("/singIn")
+    @PostMapping("/singin")
     public ResponseEntity<?> nuevo(@Valid @RequestBody NuevoUsuario nuevoUsuario, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity(new Message("Campos mal puestos"), HttpStatus.BAD_REQUEST);
