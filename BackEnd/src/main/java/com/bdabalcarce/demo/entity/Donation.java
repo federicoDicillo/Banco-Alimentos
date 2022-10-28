@@ -1,6 +1,11 @@
 package com.bdabalcarce.demo.entity;
+
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+
+import java.time.LocalDate;
 import java.util.Date;
 @Entity
 @Table(name="donations")
@@ -8,6 +13,11 @@ public class Donation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_donation;
+
+    @Column(name = "don_date")
+    @CreationTimestamp
+    private LocalDate donDate;
+
     @NotNull
     @Column(name = "don_category")
     private String donCategory;
@@ -49,6 +59,15 @@ public class Donation {
 
         this.id_donation = id_donation;
     }
+
+    public LocalDate getDonDate() {
+        return donDate;
+    }
+
+    public void setDonDate(LocalDate donDate) {
+        this.donDate = donDate;
+    }
+
     public String getDonCategory() {
 
         return donCategory;
