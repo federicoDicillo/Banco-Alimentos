@@ -42,7 +42,7 @@ public class DonationContr {
         return  new ResponseEntity<>(list, HttpStatus.OK);
     }
 
-
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/search/date/{donDate}")
     public ResponseEntity<List<Donation>> getDonationByDate(@PathVariable
                                                                 @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate donDate){
