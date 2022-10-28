@@ -23,10 +23,6 @@ import java.util.Optional;
             return iusuarioRepo.existsByNombreUsuario(nombreUsuario);
         }
 
-        public boolean existsByEmail(String email){
-            return iusuarioRepo.existsByEmail(email);
-        }
-
         public void save(Usuario usuario){
             iusuarioRepo.save(usuario);
         }

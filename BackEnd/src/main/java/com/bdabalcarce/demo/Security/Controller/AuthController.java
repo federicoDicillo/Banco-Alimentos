@@ -49,19 +49,17 @@ public class AuthController {
     @PostMapping("/singIn")
     public ResponseEntity<?> nuevo(@Valid @RequestBody NuevoUsuario nuevoUsuario, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return new ResponseEntity(new Message("Campos mas puestos o email invalido."), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Message("Campos mal puestos"), HttpStatus.BAD_REQUEST);
         }
 
         if (usuarioServ.existsByNombreUsuario(nuevoUsuario.getNombreUsuario())) {
             return new ResponseEntity(new Message("Ese nombre de usuario ya existe"), HttpStatus.BAD_REQUEST);
         }
 
-        if (usuarioServ.existsByEmail(nuevoUsuario.getEmail())) {
-            return new ResponseEntity(new Message("Ese email ya existe"), HttpStatus.BAD_REQUEST);
-        }
+
 
         Usuario usuario = new Usuario(nuevoUsuario.getNombre(), nuevoUsuario.getNombreUsuario(),
-                nuevoUsuario.getEmail(), passEncoder.encode(nuevoUsuario.getPassword()));
+                passEncoder.encode(nuevoUsuario.getPassword()));
 
         //Por defecto todos van a tener el Rol user a menos que contenga "admin"
         Set<Rol> roles = new HashSet<>();

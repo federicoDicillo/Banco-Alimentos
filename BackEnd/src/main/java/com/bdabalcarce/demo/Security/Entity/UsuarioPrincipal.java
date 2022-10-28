@@ -12,16 +12,14 @@ public class UsuarioPrincipal implements UserDetails {
 
     private String nombre;
     private String nombreUsuario;
-    private String email;
     private String password;
     private Collection<? extends GrantedAuthority> authorities;
 
     //constructor
-    public UsuarioPrincipal(String nombre, String nombreUsuario, String email, String password,
+    public UsuarioPrincipal(String nombre, String nombreUsuario, String password,
                             Collection<? extends GrantedAuthority> authorities) {
         this.nombre = nombre;
         this.nombreUsuario = nombreUsuario;
-        this.email = email;
         this.password = password;
         this.authorities = authorities;
     }
@@ -32,7 +30,6 @@ public class UsuarioPrincipal implements UserDetails {
 
         return new UsuarioPrincipal(usuario.getNombre(),
                 usuario.getNombreUsuario(),
-                usuario.getEmail(),
                 usuario.getPassword(),
                 authorities);
     }
@@ -56,9 +53,6 @@ public class UsuarioPrincipal implements UserDetails {
         return nombre;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
     @Override
     public boolean isAccountNonExpired() {

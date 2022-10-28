@@ -11,5 +11,5 @@ public interface IUsuarioRepo extends JpaRepository<Usuario, Integer> {
     Optional<Usuario> findByNombreUsuario(String nombreUsuario);
 
     boolean existsByNombreUsuario(String nombreUsuario);
-    boolean existsByEmail(String email);
+
 }
