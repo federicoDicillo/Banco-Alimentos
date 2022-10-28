@@ -8,12 +8,14 @@ import com.bdabalcarce.demo.entity.Message;
 import com.bdabalcarce.demo.entity.User;
 import com.bdabalcarce.demo.service.DonationS;
 import com.bdabalcarce.demo.service.UserS;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDate;
 import java.util.List;
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
@@ -30,12 +32,25 @@ public class DonationContr {
         return new ResponseEntity(list, HttpStatus.OK);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/search/{donCategory}")
     public ResponseEntity<List<Donation>> getDonationByCategory(@PathVariable String donCategory){
         if (!donationS.existsByDonCategory(donCategory)) {
             return new ResponseEntity(new Message("No se encontraron donaciones dentro de esa categoría"), HttpStatus.NOT_FOUND);
         }
         List<Donation> list = donationS.getDonationByDonCategory(donCategory);
+        return  new ResponseEntity<>(list, HttpStatus.OK);
+    }
+
+
+    @GetMapping("/search/date/{donDate}")
+    public ResponseEntity<List<Donation>> getDonationByDate(@PathVariable
+                                                                @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate donDate){
+        //Con el DateTimeFormat.iso.date se le da el formato de fecha para recibir por pathvariable YYYY-MM-DD
+        if (!donationS.existsByDonDate(donDate)) {
+            return new ResponseEntity(new Message("No se encontraron donaciones en esa fecha"), HttpStatus.NOT_FOUND);
+        }
+        List<Donation> list = donationS.getDonationByDonDate(donDate);
         return  new ResponseEntity<>(list, HttpStatus.OK);
     }
 

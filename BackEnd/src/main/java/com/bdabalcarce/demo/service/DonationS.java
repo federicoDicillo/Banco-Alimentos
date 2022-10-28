@@ -4,6 +4,7 @@ import com.bdabalcarce.demo.repository.DonationRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 @Service
@@ -30,6 +31,14 @@ public class DonationS {
 
     public boolean existsByDonCategory(String donCategory){
         return donationR.existsByDonCategory(donCategory);
+    }
+
+    public List<Donation> getDonationByDonDate(LocalDate donDate){
+        return donationR.findByDonDate(donDate);
+    }
+
+    public boolean existsByDonDate(LocalDate donDate){
+        return donationR.existsByDonDate(donDate);
     }
 }
 

@@ -57,6 +57,7 @@ public class OngContr {
         return new ResponseEntity(new Message("Información guardada"),HttpStatus.OK);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id_ong) {
         //valida si existe el id
