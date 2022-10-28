@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
-@RequestMapping({"ongs"})
+@RequestMapping({"/ongs"})
 public class OngContr {
     @Autowired
     OngS ongServ;
@@ -55,5 +55,17 @@ public class OngContr {
         ongServ.save(ong);
 
         return new ResponseEntity(new Message("Información guardada"),HttpStatus.OK);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") int id_ong) {
+        //valida si existe el id
+        if (!ongServ.existById(id_ong)) {
+            return new ResponseEntity(new Message("El ID no Existe"), HttpStatus.BAD_REQUEST);
+        }
+
+        ongServ.delete(id_ong);
+
+        return new ResponseEntity(new Message("Ong eliminada"), HttpStatus.OK);
     }
 }

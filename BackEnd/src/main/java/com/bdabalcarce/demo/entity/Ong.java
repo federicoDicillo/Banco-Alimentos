@@ -6,7 +6,8 @@ import javax.validation.constraints.Size;
 @Table(name = "ongs")
 public class Ong {
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id_ong;
 
     @Column (name = "ong_cuit")
     private String ongCuit;
@@ -47,7 +48,16 @@ public class Ong {
             this.ongPhone = ongPhone;
             this.ongEmail = ongEmail;
         }
-        public String getOngName() {
+
+    public int getId_ong() {
+        return id_ong;
+    }
+
+    public void setId_Ong(int id_ong) {
+        this.id_ong = id_ong;
+    }
+
+    public String getOngName() {
             return ongName;
         }
         public void setOngName(String ongName) {

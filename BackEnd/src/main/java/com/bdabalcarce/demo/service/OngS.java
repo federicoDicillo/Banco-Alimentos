@@ -20,8 +20,8 @@ public class OngS {
     public void save(Ong ong) {
         ongR.save(ong);
     }
-    public void delete(int id) {
-        ongR.deleteById(id);
+    public void delete(int id_ong) {
+        ongR.deleteById(id_ong);
     }
     public boolean existById(int id) {
         return ongR.existsById(id);
