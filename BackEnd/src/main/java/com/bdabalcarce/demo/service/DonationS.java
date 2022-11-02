@@ -37,8 +37,14 @@ public class DonationS {
         return donationR.findByDonDate(donDate);
     }
 
+    public List<Donation> getDonationByDonDateBetween(LocalDate startDate, LocalDate endDate){
+        return donationR.findByDonDateBetween(startDate, endDate);
+    }
+
     public boolean existsByDonDate(LocalDate donDate){
         return donationR.existsByDonDate(donDate);
     }
+
+
 }
 

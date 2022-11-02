@@ -14,4 +14,7 @@ public interface DonationRepo extends JpaRepository<Donation, Integer> {
     public List<Donation> findByDonDate(LocalDate donDate);
 
     boolean existsByDonDate(LocalDate donDate);
+
+    public List<Donation> findByDonDateBetween(LocalDate startDate, LocalDate endDate);
+
 }

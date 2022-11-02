@@ -43,9 +43,16 @@ public class DonationContr {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("/search/between/{startDate}&{endDate}")
+    public ResponseEntity<List<Donation>>getDonationByDateBetween(@PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
+                                                                  @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate){
+        List<Donation> list = donationS.getDonationByDonDateBetween(startDate, endDate);
+        return new ResponseEntity<>(list, HttpStatus.OK);
+    }
+
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/search/date/{donDate}")
-    public ResponseEntity<List<Donation>> getDonationByDate(@PathVariable
-                                                                @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate donDate){
+    public ResponseEntity<List<Donation>> getDonationByDate(@PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate donDate){
         //Con el DateTimeFormat.iso.date se le da el formato de fecha para recibir por pathvariable YYYY-MM-DD
         if (!donationS.existsByDonDate(donDate)) {
             return new ResponseEntity(new Message("No se encontraron donaciones en esa fecha"), HttpStatus.NOT_FOUND);
