@@ -13,7 +13,7 @@ import com.bdabalcarce.demo.service.UserS;
 import javax.validation.Valid;
 import java.util.List;
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"https://bda-balcarce.netlify.app","https://login-bda-balcarce.netlify.app"})
 @RequestMapping({"/users"})
 public class UserContr {
     @Autowired

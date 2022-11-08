@@ -1,5 +1,7 @@
 package com.bdabalcarce.demo.controller;
+import com.bdabalcarce.demo.Dto.DonationDto;
 import com.bdabalcarce.demo.Dto.OngDto;
+import com.bdabalcarce.demo.entity.Donation;
 import com.bdabalcarce.demo.entity.Message;
 import com.bdabalcarce.demo.entity.Ong;
 import com.bdabalcarce.demo.service.OngS;
@@ -12,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"https://bda-balcarce.netlify.app","https://login-bda-balcarce.netlify.app"})
 @RequestMapping({"/ongs"})
 public class OngContr {
     @Autowired
@@ -69,4 +71,27 @@ public class OngContr {
 
         return new ResponseEntity(new Message("Ong eliminada"), HttpStatus.OK);
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @PutMapping("/update/{id}")
+    public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody OngDto ongDto) {
+        //valida si existe el id
+        if (!ongServ.existById(id)) {
+            return new ResponseEntity(new Message("El ID no Existe"), HttpStatus.BAD_REQUEST);
+        }
+
+        Ong ong = ongServ.getOne(id).get();
+        ong.setOngName(ongDto.getOngname());
+        ong.setOngCuit(ongDto.getOngcuit());
+        ong.setOngReason(ongDto.getOngreason());
+        ong.setOngHeadNm(ongDto.getOngheadnm());
+        ong.setOngHeadLn(ongDto.getOngheadln());
+        ong.setOngAddress(ongDto.getOngaddress());
+        ong.setOngPhone(ongDto.getOngphone());
+        ong.setOngEmail(ongDto.getOngemail());
+
+        ongServ.save(ong);
+        return new ResponseEntity(new Message("Donacion actualizado"), HttpStatus.OK);
+    }
+
 }

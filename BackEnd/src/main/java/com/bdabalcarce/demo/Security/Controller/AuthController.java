@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localHost:3000")
+@CrossOrigin(origins = "https://login-bda-balcarce.netlify.app")
 @RequestMapping({"/auth"})
 public class AuthController {
 

@@ -12,6 +12,10 @@ import java.util.Optional;
 public class DonationS {
     @Autowired
     DonationRepo donationR;
+
+    public Optional<Donation> getOne(int id) {
+        return donationR.findById(id);
+    }
     public List<Donation> list() {
         return donationR.findAll();
     }

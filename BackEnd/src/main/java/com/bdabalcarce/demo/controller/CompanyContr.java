@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"https://bda-balcarce.netlify.app","https://login-bda-balcarce.netlify.app"})
 @RequestMapping({"/companies"})
 public class CompanyContr {
     @Autowired
