@@ -1,0 +1,17 @@
+.message,
+.door404,
+.h2NotFound {
+  position: absolute;
+  left: 40%;
+}
+
+.h2NotFound {
+  top: 15%;
+}
+.door404 {
+  top: 25%;
+}
+.message {
+  top: 75%;
+  left: 38%;
+}

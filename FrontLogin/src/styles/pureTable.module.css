@@ -1,0 +1,7 @@
+.tHeadPureTable {
+  background-color: #ab68f8;
+  color: var(--secondary-color);
+}
+.tBodyPureTable {
+  background-color: rgba(255, 255, 255, 0.853);
+}

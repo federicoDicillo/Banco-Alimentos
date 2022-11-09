@@ -1,0 +1,80 @@
+:root {
+  --facebok: #3b5999;
+  --instagram: #e1306c;
+  --linkedin: #0a66c2;
+  --main-color: #363739;
+  --first-value: 0.3rem;
+  --second-value: 2rem;
+}
+
+/* Home: positioning and design of containers */
+.icon {
+  color: #111;
+  text-decoration: none;
+  padding-right: 30px;
+  padding-top: 20px;
+}
+
+.social-container {
+  margin-top: -50px;
+  margin-left: 160px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+}
+
+.social-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--second-value);
+  height: var(--second-value);
+  border-radius: 50%;
+}
+
+.fig-facebook {
+  background-image: url('../assets/facebook.svg');
+  border-radius: 50%;
+}
+
+.fig-instagram {
+  background-image: url('../assets/instagram.svg');
+  border-radius: 50%;
+}
+
+.fig-linkedin {
+  background-image: url('../assets/linkedin.svg');
+  border-radius: 50%;
+}
+
+.fig {
+  background-repeat: no-repeat;
+  width: var(--second-value);
+  height: var(--second-value);
+  background-position: center;
+}
+
+.fig {
+  filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(303deg)
+    brightness(106%) contrast(106%);
+}
+
+.colorsocialF {
+  background-color: var(--facebok);
+}
+
+.colorsocialI {
+  background-color: var(--instagram);
+}
+
+.colorsocialL {
+  background-color: var(--linkedin);
+}
+
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  .social-container {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: -40px;
+  }
+}

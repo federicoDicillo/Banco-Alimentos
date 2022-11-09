@@ -1,0 +1,7 @@
+.pos {
+  top: 0;
+}
+form {
+  display: flexbox;
+  z-index: 2;
+}

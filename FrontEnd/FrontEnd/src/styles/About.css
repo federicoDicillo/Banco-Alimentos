@@ -1,0 +1,72 @@
+:root {
+  --one-hundred-percent: 100%;
+}
+.headerAbout {
+  margin-top: -49px;
+  width: var(--one-hundred-percent);
+  height: 350px;
+  background: #d9d9d9;
+}
+.titleAbout {
+  padding-left: 700px;
+  width: var(--one-hundred-percent);
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 98px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.paragraphAbout {
+  width: 80%;
+  height: 72.18px;
+  padding-left: 400px;
+  font-weight: var(--font--weight);
+  font-size: 16px;
+  line-height: 25px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.imgAbout {
+  padding-top: 58px;
+  height: 91.7%;
+  width: var(--one-hundred-percent);
+}
+.bodyAbout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.paragraphs {
+  padding-left: 23%;
+}
+.titleOneAbout {
+  padding-top: 150px;
+}
+.titletwoAbout {
+  margin-top: -200px;
+}
+.titlethreeAbout {
+  margin-top: -100px;
+}
+.titlesparagraphs {
+  color: #2ec5ce;
+}
+.contentAboutFooter {
+  margin-top: -284px;
+}
+.containerHeaderAbout {
+  margin-left: -50px;
+}
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+  .titleAbout {
+    margin-left: -250px;
+  }
+  .imgAbout {
+    height: 90.7%;
+  }
+  .paragraphs {
+    margin-left: -100px;
+  }
+}

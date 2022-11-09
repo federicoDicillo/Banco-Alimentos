@@ -1,0 +1,77 @@
+:root {
+  --primary-500: #8c30f5;
+  --white-color: #ffff;
+  --black-color: black;
+  --font--weight: 500;
+  --fifteen-pixels: 15px;
+}
+.logo {
+  position: absolute;
+  width: 100px;
+  height: 35px;
+  left: 300px;
+  top: var(--fifteen-pixels);
+}
+.container-navbar {
+  padding-left: 200px;
+}
+.link {
+  font-weight: var(--font--weight);
+  text-decoration: none;
+  padding-right: 30px;
+  padding-top: var(--fifteen-pixels);
+  color: var(--black-color);
+}
+
+.activebar {
+  color: var(--primary-500);
+  padding-top: var(--fifteen-pixels);
+}
+.link:hover {
+  color: var(--primary-500);
+}
+.botonI {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 32px;
+  gap: 10px;
+  width: 175px;
+  height: 48px;
+  background: var(--primary-500);
+  border-radius: 6px;
+  color: var(--white-color);
+  margin-top: -12px;
+  text-decoration: none;
+  font-weight: var(--font--weight);
+}
+.botonI:hover {
+  color: var(--white-color);
+}
+.letras {
+  font-weight: var(--font--weight);
+}
+.botonR {
+  background-color: #f1e4ff;
+  color: var(--primary-500);
+  border-radius: 6px;
+  padding: 12px 32px;
+  margin-top: -12px;
+  text-decoration: none;
+  font-weight: var(--font--weight);
+}
+.botonR:hover {
+  color: var(--primary-500);
+}
+.containtModal {
+  padding-top: var(--fifteen-pixels);
+  padding-left: var(--fifteen-pixels);
+}
+@media screen and (max-width: 768px) {
+  .containtModal {
+    padding-left: 0;
+  }
+  .logo {
+    margin-left: -70px;
+  }
+}
