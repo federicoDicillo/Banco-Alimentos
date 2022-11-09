@@ -1,0 +1,241 @@
+.header-participate {
+  width: 100%;
+  height: 272px;
+  background: #d9d9d9;
+  margin-top: -50px;
+}
+.header-h1 {
+  width: 838px;
+  height: 97.82px;
+  margin-left: 470px;
+  padding-top: 50px;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 98px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.p-header {
+  width: 100%;
+  height: 72.18px;
+  padding-left: 530px;
+  top: 128.25px;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.ImgA,
+.ImgC {
+  width: 480px;
+  height: 435px;
+  margin-top: 21px;
+  border-radius: 141px;
+}
+.ImgB {
+  width: 480px;
+  height: 435px;
+  margin-top: 450px;
+  margin-left: 650px;
+  border-radius: 141px;
+}
+.voluntary {
+  width: 508px;
+  height: 76px;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 54px;
+  text-align: center;
+  display: flex;
+}
+.voluntary-e {
+  width: 508px;
+  height: 76px;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 54px;
+  text-align: center;
+  display: flex;
+}
+
+.header-h3,
+.header-h3-e {
+  margin-top: 21px;
+  width: 508px;
+  height: 76px;
+  margin-left: 100px;
+  margin-top: 83px;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 54px;
+}
+.parrafo-v {
+  width: 566px;
+  height: 300px;
+  margin-left: 100px;
+  margin-top: -10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+}
+.header-h3-d {
+  width: 508px;
+  height: 76px;
+  margin-left: 25px;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 54px;
+  margin-top: -400px;
+  text-align: center;
+}
+.parrafo-d {
+  font-size: 16px;
+  margin-top: 50px;
+  margin-left: 5px;
+  line-height: 26px;
+  text-align: center;
+}
+.parrafo-e {
+  width: 566px;
+  height: 300px;
+  margin-left: 90px;
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+}
+.container-logos {
+  display: flex;
+  margin-top: 50px;
+  margin-left: -45px;
+  margin-bottom: 80px;
+}
+.img-logos {
+  height: 100px;
+  width: 200px;
+  margin-right: 50px;
+}
+.img-nutrien {
+  height: 70px;
+  width: 200px;
+  margin-right: 50px;
+}
+.img-granix {
+  height: 150px;
+  width: 150px;
+  margin-right: 50px;
+  margin-top: -30px;
+}
+.header-h3-Emp {
+  width: 1100px;
+  height: 80px;
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 54px;
+}
+.cont-title {
+  margin-top: 450px;
+  margin-left: 100px;
+}
+@media screen and (min-width: 360px) and (max-width: 768px) {
+  .header-participate {
+    height: 150px;
+  }
+  .header-h1 {
+    width: 100%;
+    font-size: 30px;
+    margin-left: 0;
+    padding-left: 200px;
+  }
+  .p-header {
+    font-size: 10px;
+    margin-top: -60px;
+    margin-left: -400px;
+    width: 1000px;
+  }
+  .ImgA,
+  .ImgB,
+  .ImgC {
+    width: 250px;
+    height: 250px;
+    border-radius: 25%;
+  }
+  .ImgA {
+    margin-left: -70px;
+    margin-top: 70px;
+  }
+  .ImgB {
+    margin-left: 280px;
+    margin-top: 350px;
+  }
+  .ImgC {
+    margin-left: -70px;
+  }
+  .header-h3,
+  .header-h3-d,
+  .header-h3-e {
+    font-size: 12px;
+  }
+  .header-h3 {
+    margin-left: -50px;
+  }
+  .header-h3-d {
+    margin-left: -30px;
+    margin-top: -320px;
+  }
+  .parrafo-v,
+  .parrafo-e {
+    width: 400px;
+    font-size: 10px;
+    margin-left: 10px;
+  }
+  .parrafo-d {
+    width: 300px;
+    font-size: 10px;
+    margin-left: -60px;
+    margin-top: 10px;
+  }
+  .parrafo-e {
+    margin-top: -10px;
+  }
+  .header-h3-e {
+    margin-top: 30px;
+    margin-left: -60px;
+  }
+  .header-h3-Emp {
+    font-size: 18px;
+  }
+  .cont-title {
+    margin-top: 250px;
+    margin-left: 3px;
+  }
+  .img-logos {
+    height: 50px;
+    width: 70px;
+  }
+  .img-nutrien {
+    height: 35px;
+    width: 100px;
+  }
+  .img-granix {
+    height: 50px;
+    width: 50px;
+  }
+  .container-logos {
+    margin-left: -70px;
+    margin-bottom: 200px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  .header-h1 {
+    margin-left: 250px;
+  }
+  .p-header {
+    margin-left: -200px;
+  }
+}

@@ -1,0 +1,73 @@
+.fondo4 {
+  height: 1200px;
+  width: 100%;
+  z-index: -1;
+}
+.formong {
+  height: 1100px;
+}
+.containerNeedHelpForm {
+  position: absolute;
+  top: 60px;
+  left: 350px;
+}
+.submitButtonFormOng {
+  position: absolute;
+  left: 250px;
+}
+.titleBodyNeedHelp {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 98px;
+  width: 501px;
+  height: 277px;
+  line-height: 98px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+.paragraphgBodyNeedHelp {
+  width: 475px;
+  height: 655px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.containerBodyNeedHelp {
+  margin-top: -1100px;
+  margin-left: 200px;
+}
+/* @media screen and (max-width: 700px) and (min-width: 400px) {
+  .containerBodyNeedHelp {
+    display: none;
+  }
+  .containerNeedHelpForm {
+    position: relative;
+    margin-top: -1200px;
+    margin-left: -300px;
+  }
+  .responsiveFooterOng {
+    position: relative;
+    margin-top: 300px;
+  }
+} */
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+  .containerBodyNeedHelp {
+    margin-top: -1107px;
+    margin-left: 80px;
+  }
+  .containerNeedHelpForm {
+    margin-left: -350px;
+    margin-top: 10px;
+  }
+  .footer-help {
+    margin-top: 350px;
+  }
+  .conteFoo {
+    padding-left: -50px;
+  }
+  .cont-politic {
+    margin-left: 200px;
+  }
+}

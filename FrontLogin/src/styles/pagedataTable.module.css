@@ -1,0 +1,25 @@
+.titleDataTable {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.chooseTableButton {
+  width: 205px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.chooseTableButton:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.titleTables {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+}

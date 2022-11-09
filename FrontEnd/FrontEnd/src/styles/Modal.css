@@ -1,0 +1,64 @@
+.button-close {
+  color: rgba(255, 255, 255, 0.67);
+  margin-left: 315px;
+  margin-top: 20px;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  font-weight: 800;
+  background-color: transparent;
+  border: none;
+}
+
+.button-close:hover {
+  color: white;
+}
+.modal-btn {
+  --bs-btn-hover-bg: #8c30f5;
+  --bs-btn-active-bg: #8c30f5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 40px;
+  gap: 10px;
+  width: 208px;
+  height: 40px;
+  background: #8c30f5;
+  border-radius: 6px;
+  color: #ffff;
+  margin-top: -8px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+}
+.modal-dialog {
+  margin-top: 170px;
+}
+.modal-content {
+  width: 406px;
+  height: 453px;
+  margin: auto;
+  background: #8c30f5;
+  border-radius: 100px;
+}
+.button-modal {
+  --bs-btn-hover-color: black;
+  --bs-btn-hover-bg: #f5f5f5;
+  --bs-btn-active-bg: white;
+  --bs-btn-active-color: black;
+  background: #f5f5f5;
+  color: black;
+  border: none;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  width: 300px;
+}
+.modal-body {
+  margin-left: 35px;
+  margin-top: 80px;
+}
+.donate-e {
+  text-decoration: none;
+  color: black;
+}

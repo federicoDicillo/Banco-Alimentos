@@ -1,0 +1,71 @@
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+.section {
+  margin-top: 250px;
+  margin-left: 450px;
+  width: 100%;
+  max-width: 420px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  padding-bottom: 1rem;
+}
+
+.interface {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 5px;
+  border-color: var(--primary-color);
+}
+.titleLogin {
+  color: black;
+  padding-left: 100px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.titleInterface {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 20px;
+}
+.buttonLogin {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  height: 35px;
+}
+.buttonLogin:hover {
+  transform: scale(1.1, 1.1);
+}
+.purpleDesign {
+  position: absolute;
+  bottom: 0px;
+  left: 1225px;
+  width: 695px;
+  height: 1000px;
+}
+.bagWithFood {
+  position: absolute;
+  left: 1300px;
+  top: 270px;
+}
