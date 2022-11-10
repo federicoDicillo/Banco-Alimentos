@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"https://bda-balcarce.netlify.app","https://login-bda-balcarce.netlify.app"})
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping({"/ongs"})
 public class OngContr {
     @Autowired
